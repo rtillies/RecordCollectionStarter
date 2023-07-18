@@ -1,0 +1,9 @@
+﻿@model Album
+
+<h1>@Model.Title by @Model.Artist</h1>
+
+@foreach (var item in Model.Songs)
+{
+    <h3>@item.Title</h3>
+    <p>Length: @item.LengthInSeconds</p>
+}
