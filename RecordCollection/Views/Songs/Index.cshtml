@@ -2,8 +2,10 @@
 
 <h1>@Model.Title by @Model.Artist</h1>
 
-@foreach (var item in Model.Songs)
+@foreach (var song in Model.Songs)
 {
-    <h3>@item.Title</h3>
-    <p>Length: @item.LengthInSeconds</p>
+    <p>Title: @song.Title || 
+        Length: @song.LengthInMinutesAndSeconds() 
+        (@song.LengthInSeconds seconds)
+    </p>
 }
